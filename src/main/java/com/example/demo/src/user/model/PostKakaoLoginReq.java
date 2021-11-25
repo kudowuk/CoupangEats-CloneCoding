@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class PostLoginReq {
-    private String userId;
-    private String userPwd;
+@NoArgsConstructor
+public class PostKakaoLoginReq {
+    private String accessToken;
 }

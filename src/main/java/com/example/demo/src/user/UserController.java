@@ -171,6 +171,24 @@ public class UserController {
         }
     }
 
+    // 카카오 로그인 API
+//    @ResponseBody
+//    @PostMapping("/login/kakao")
+//    public BaseResponse<PostLoginRes> kakaoLogin(@RequestBody PostKakaoLoginReq postKakaoLogin) {
+//
+//        try {
+//            // 엑세스 토큰으로 사용자 정보 받기
+//            KaKaoUserInfo kaKaoUserInfo = KakaoApiService.getKakaoUserInfo(postKakaoLogin.getAccessToken());
+//
+//            // 로그인 or 회원가입 진행 후 jwt, userIdx 반환하기
+//            PostLoginRes postLoginRes = userProvider.kakaoLogin(kaKaoUserInfo);
+//            return new BaseResponse<>(postLoginRes);
+//        } catch (BaseException exception) {
+//            return new BaseResponse<>(exception.getStatus());
+//        }
+//    }
+
+
     /**
      * 유저정보변경 API
      * [PATCH] /users/:userIdx
