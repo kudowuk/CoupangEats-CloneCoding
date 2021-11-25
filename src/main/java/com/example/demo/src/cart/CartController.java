@@ -102,23 +102,23 @@ public class CartController {
     }
 
 
-    /**
-     * 카트디테일등록 API
-     * [POST] /carts/{cartIdx}/cartDetails
-     * @return BaseResponse<PostCartRes>
-     */
-    // Body
-    // POST 카드 담기 등록 API
-    @ResponseBody
-    @PostMapping("/{cartIdx}/cartDetails")
-    public BaseResponse<PostCartDetailRes> createCartDetail(@PathVariable("cartIdx") int cartIdx, @RequestBody PostCartDetailReq postCartDetailReq) {
-        try{
-            PostCartDetailRes postCartDetailRes = cartService.createCartDetail(cartIdx, postCartDetailReq);
-            return new BaseResponse<>(postCartDetailRes);
-        } catch(BaseException exception){
-            return new BaseResponse<>((exception.getStatus()));
-        }
-    }
+//    /**
+//     * 카트디테일등록 API
+//     * [POST] /carts/{cartIdx}/cartDetails
+//     * @return BaseResponse<PostCartRes>
+//     */
+//    // Body
+//    // POST 카드 담기 등록 API
+//    @ResponseBody
+//    @PostMapping("/{cartIdx}/cartDetails")
+//    public BaseResponse<PostCartDetailRes> createCartDetail(@PathVariable("cartIdx") int cartIdx, @RequestBody PostCartDetailReq postCartDetailReq) {
+//        try{
+//            PostCartDetailRes postCartDetailRes = cartService.createCartDetail(cartIdx, postCartDetailReq);
+//            return new BaseResponse<>(postCartDetailRes);
+//        } catch(BaseException exception){
+//            return new BaseResponse<>((exception.getStatus()));
+//        }
+//    }
 
     // PATCH 카트 담기 수정 API
     @ResponseBody

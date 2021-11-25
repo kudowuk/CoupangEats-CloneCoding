@@ -80,7 +80,7 @@ public class CartDao {
     // POST 카트 담기 등록 API
     public int createCart(int userIdx, PostCartReq postCartReq){
         String createCartQuery = "insert into Cart (userIdx, storeIdx, couponIdx, toOwner, toDriver, disposableAt ) VALUES (?,?,?,?,?,?)";
-        Object[] createCartParams = new Object[]{userIdx, postCartReq.getStoreIdx(), postCartReq.getCouponIdx(), postCartReq.getToOwner(), postCartReq.getToDriver(), postCartReq.getDisposableAt()};
+        Object[] createCartParams = new Object[]{userIdx, postCartReq.getStoreIdx(), postCartReq.getCouponIdx(), postCartReq.getToOwner(), postCartReq.getToDriver(), postCartReq.getDisposableAt() };
         this.jdbcTemplate.update(createCartQuery, createCartParams);
 
         String lastInsertAdQuery = "select last_insert_id()";
